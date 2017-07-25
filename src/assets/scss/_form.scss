@@ -1,0 +1,64 @@
+$highlight-color: $primary-color;
+
+.form-floating-label {
+  position: relative;
+  margin:0 .5rem;
+  [type='name'],
+  [type='text'],
+  [type='password'],
+  [type='date'],
+  [type='datetime'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='email'],
+  [type='number'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='url'],
+  [type='color'],
+  textarea {
+    margin-bottom: 0;
+    color: $dark-gray;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 34px 1rem 1rem 25px;
+    margin:1rem 0;
+  }
+
+  label {
+    color: $medium-gray;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 30px;
+    bottom:  10px;
+    transition: all 0.2s ease-in;
+    font-weight: 300;
+  }
+
+  textarea ~ label {
+    top: 10px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  /* active state */
+  input:focus ~ label,
+  input:disabled[value] ~ label,
+  &.has-value input ~ label {
+    top: 0;
+    font-size: 14px;
+    color: $highlight-color;
+    font-weight: 400;
+  }
+
+  textarea:focus ~ label,
+  &.has-value textarea ~ label {
+    top: 0;
+    font-size: 14px;
+    color: $highlight-color;
+    font-weight: 400;
+  }
+}

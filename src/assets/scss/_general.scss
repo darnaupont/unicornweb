@@ -1,0 +1,295 @@
+$navbg: rgba(255, 255, 255, 0.8);
+.menu{
+  @include breakpoint(small only){
+  background-color: $white;
+  height: auto;
+  }
+  position: fixed;
+  z-index: 9999999;
+  height: 100vh;
+  float:left;
+  .top-bar-uni{
+    background-color: $navbg;
+    margin:0;
+    padding:0;
+    display:inline-block;
+    @include breakpoint(medium){
+    display:inline;
+    width:auto;}
+  }
+  // .logoloco, .sections{
+  //   display:inline-block;
+  //   padding:0;
+  //   margin:0;
+  // }
+
+
+
+  .unicorntop{display:inline-flex; white-space: nowrap;
+  li p {
+    margin:1rem 2.5rem;
+    text-transform: uppercase;
+    span:first-child {
+    font-weight: bold;
+    }
+    color: $white;
+    letter-spacing: 2px;}
+  .logo{height: 2rem;}
+  li:first-child{
+    background-color: $navbg;
+  }
+  @include breakpoint(small only){
+    width:100vw;
+    background-color: $navbg;
+    li p {margin-left: 0;color: $black;}
+    li:first-child{
+      background-color: transparent;
+    }
+  }
+  }
+
+  .sections{
+    @include breakpoint(small only){
+    background-color: $white;
+    }
+    background-color: $navbg;
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    bottom: 0;
+    .icons{
+      fill: $secondary-color;
+      transition-duration: 1s;
+      &:hover{ fill: $black;
+      transition-duration: 1s;
+      transform: scale(1.1);}
+      height: 1.4rem;
+      @include breakpoint(small only){
+      height: 14vw;
+      width: 14vw;
+      max-height: 1.4rem;
+      }
+      @include breakpoint(medium){
+      margin:.3rem;
+    }
+    }
+
+      @include breakpoint(medium){
+      display:list-item;
+      top: 57px;
+      width:auto;
+      padding-top:2rem;
+    }
+
+      li{display:inline-block;}
+      @include breakpoint(medium){
+      li{display:inline;}
+      }
+    }
+  .bottom-bar-uni{
+    @media screen and (max-height: 365px) {
+      display: none;
+      }
+      position:fixed;
+      z-index: 9999;
+      @include breakpoint(small only){
+      right: 0;
+      padding-right:10px;
+      display: inline-flex;
+        a{float:right;
+        padding: 18px 10px 0 0;
+        }
+      }
+      @include breakpoint(medium){
+      bottom:0;
+      margin: 0;
+      a{
+        padding: 0 22px;
+        padding-bottom:15px;
+        }
+      }
+    }
+}
+
+.main-content{
+    overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+.content{
+  margin-top: -50px;
+  padding: 55px 0;
+  background: url('../img/mobile/info.jpg') no-repeat center center fixed;
+  background-size: cover;
+  @include breakpoint(medium){
+  padding: 0;
+  padding-left: 65px;
+  background: url('../img/desktop/info.jpg') no-repeat center center fixed;
+  background-size: cover;
+  }
+
+  width: 100%;
+  min-height:100vh;
+}
+.text{
+  position:relative;
+  z-index: 99999;
+  margin:50px 40px 20px;
+  @include breakpoint(small only){
+  margin:20px;
+  margin-bottom:70px;
+  }
+  background-color: $navbg;
+  padding:1rem;
+
+}
+
+// buttons i altres
+// .unicornbutton{
+//   margin: 2rem 0;
+//   text-transform: uppercase;
+//   color:black;
+//   &:hover{opacity:0.5;}
+//   }
+
+
+#home{
+  .text{
+      text-align: center;
+  }
+  .logohome{
+    margin-top:3rem;
+    width: 15vh;
+    height: 15vh;
+  }
+  h1{
+    padding: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    line-height: 1;
+    font-weight: 600;
+  small{
+
+    font-size: $h3-font-size;
+    @include breakpoint(medium){
+      font-size: $h1-font-size;
+    }
+    color: $black;
+    letter-spacing: 10px;
+    font-weight: 200;
+  }}
+  p{padding:0 3rem;}
+}
+
+#salon, #Dormitorio{
+  // base per ensenyar
+@include breakpoint(small only){
+  .content{
+    margin-top: -30px;
+    padding-top: 80px;
+    padding-bottom: 10px;
+  }
+  .text{
+    margin: 20px;
+    margin-bottom: 20px;
+  }
+}
+// fi de base
+  .text{
+    position:relative;
+
+        @include breakpoint(medium){
+  position:absolute;
+    bottom:15%;
+  padding:2rem;}
+  }
+  .logohome{
+    margin-top:3rem;
+    width: 130px;
+    height: 130px;
+  }
+  h1{
+    text-transform: uppercase;
+    font-weight: 500;
+  span{ font-size: $h1-font-size*0.8;
+    letter-spacing: 16px;
+    font-weight: 300;
+  }}
+  header{
+    width:100%;
+    h1{float:left}
+    a{float:right;}
+    display:inline-block;
+  }
+}
+#contacto{
+
+  .content{
+  background: $medium-gray;
+  }
+  .text{
+    background: transparent;
+  }
+  header{
+    width:100%;
+    h1{float:left}
+    a{float:right;}
+    display:inline-block;
+  }
+  #formulario{
+    position:relative;
+    z-index: 99999;
+
+  }
+}
+.unicornhomb{
+  margin: 2rem 0;
+}
+.unicornbutton{
+  text-transform: uppercase;
+  color:black;
+  font-weight: bold;
+  position:relative;
+  transition: all 1s linear;
+&:after{
+  content:"";
+  top:50%;
+  left:0;
+  margin-top:-2px;
+  position:absolute;
+  height: 4px;
+  width: 0%;
+  background-color:red;
+  opacity:0.6;
+  transition: all 1s linear;
+}
+
+&:hover{
+  transition: all 1s linear;
+  &:after{
+    width: 100%;
+    transition: all 1s linear;
+  }
+}
+}
+.contentImg{
+  position:relative;
+  img{padding:0.5rem;
+  }
+}
+.alfaba{
+
+  position:relative;
+  padding-left:60px;
+  width: 81rem;
+
+}
+.reveal.large {
+    width: 80%;
+    left: 30px;
+  img {
+    /* display: inline-block; */
+    vertical-align: middle;
+    width: 100%;
+}
+}
