@@ -52,13 +52,13 @@
       </ul>
       <ul class="bottom-bar-uni no-bullet">
         <li>
-          <a href="es/index.html" class="language-active" >es</a>
+          <a href="../es/index.html" class="language-active" >es</a>
         </li>
         <li>
-          <a href="en/index.html" >en</a>
+          <a href="../en/index.html" >en</a>
         </li>
         <li>
-          <a href="de/index.html" >de</a>
+          <a href="../de/index.html" >de</a>
         </li>
       </ul>
   </ul>
@@ -81,16 +81,16 @@
     $( document ).ready(function(){
         var userLang = navigator.language || navigator.userLanguage;
         if (userLang == "es") {
-        window.location.href = "/es/home.html"
+        window.location.href = "es/home.html"
         }
         else if(userLang == "en"){
-        window.location.href = "/en/home.html"
+        window.location.href = "en/home.html"
         }
         else if(userLang == "de"){
-        window.location.href = "/de/home.html"
+        window.location.href = "de/home.html"
         }
         else {
-        window.location.href = "/es/home.html"
+        window.location.href = "es/home.html"
         }
     });
 

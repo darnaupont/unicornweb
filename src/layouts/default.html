@@ -53,13 +53,13 @@
       </ul>
       <ul class="bottom-bar-uni no-bullet">
         <li>
-          <a href="{{root}}es/{{currentPage}}.html" {{#ifequal lang 'es'}}class="language-active" {{/ifequal}}>es</a>
+          <a href="../es/{{currentPage}}.html" {{#ifequal lang 'es'}}class="language-active" {{/ifequal}}>es</a>
         </li>
         <li>
-          <a href="{{root}}en/{{currentPage}}.html" {{#ifequal lang 'en'}}class="language-active" {{/ifequal}}>en</a>
+          <a href="../en/{{currentPage}}.html" {{#ifequal lang 'en'}}class="language-active" {{/ifequal}}>en</a>
         </li>
         <li>
-          <a href="{{root}}de/{{currentPage}}.html" {{#ifequal lang 'de'}}class="language-active" {{/ifequal}}>de</a>
+          <a href="../de/{{currentPage}}.html" {{#ifequal lang 'de'}}class="language-active" {{/ifequal}}>de</a>
         </li>
       </ul>
   </ul>
@@ -73,16 +73,16 @@
     $( document ).ready(function(){
         var userLang = navigator.language || navigator.userLanguage;
         if (userLang == "es") {
-        window.location.href = "{{root}}/es/home.html"
+        window.location.href = "es/home.html"
         }
         else if(userLang == "en"){
-        window.location.href = "{{root}}/en/home.html"
+        window.location.href = "en/home.html"
         }
         else if(userLang == "de"){
-        window.location.href = "{{root}}/de/home.html"
+        window.location.href = "de/home.html"
         }
         else {
-        window.location.href = "{{root}}/es/home.html"
+        window.location.href = "es/home.html"
         }
     });
 
