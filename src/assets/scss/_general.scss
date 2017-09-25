@@ -1,5 +1,5 @@
 // $navbg: rgba(255, 255, 255, 0.8);
-$navbg: $white;
+$navbg: rgba(254, 254, 254, 0.8);
 .menu{
   a{border-left: 3px solid transparent;}
   @include breakpoint(small only){
@@ -33,7 +33,9 @@ $navbg: $white;
     letter-spacing: 2px;}
   .logo{height: 2rem;}
   li:first-child{
+  @include breakpoint(medium){
     padding-bottom:1rem;
+  }
     background-color: $navbg;
   }
   @include breakpoint(small only){
@@ -122,14 +124,16 @@ $navbg: $white;
 .content{
   position:relative;
   min-height: 100vh;
+  padding: 6em 0;
+  @include breakpoint(medium){
   padding: 55px 0;
+}
 //   background: url('../img/mobile/info.jpg') no-repeat center center;
 //   background-size: cover;
 //   @include breakpoint(medium){
 //   padding: 0;
 //   padding-left: 65px;
-  background: url('../img/desktop/info.jpg') no-repeat center center;
-  background-size: cover;
+
   }
 //
 //   width: 100%;
@@ -145,6 +149,7 @@ $navbg: $white;
 //   margin:20px;
 //   margin-bottom:70px;
 //   }
+
     margin: 1rem;
   @include breakpoint(medium){
     margin:0 3rem;
@@ -167,11 +172,24 @@ $navbg: $white;
   // .content{
   //   margin-top: 0px;
   //   padding: 40px 40px 40px 70px;}
+  .content{
+    background: url('../img/desktop/info.jpg') no-repeat center center;
+    background-size: cover;
+  }
   .text{
   text-align: center;
+  @include breakpoint(medium){
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  }
+  @include breakpoint(small only){
+
+    padding:0.5rem 0;
+    margin-top:0;
+    margin-bottom:0;
+
+    }
   }
   .logohome{
     margin-top:3rem;
@@ -197,6 +215,14 @@ $navbg: $white;
   p{padding:0 3rem;}
 }
 
+#salon .content{
+    background: url('../img/desktop/salon.jpg') no-repeat center center;
+    background-size: cover;
+}
+#Dormitorio .content{
+  background: url('../img/desktop/dormitorio.jpg') no-repeat center center;
+  background-size: cover;
+}
 #salon, #Dormitorio{
   // base per ensenyar
 @include breakpoint(small only){
@@ -204,7 +230,7 @@ $navbg: $white;
     min-height: 1rem;
     height: auto;
     margin-top: -30px;
-    padding-top: 80px;
+    padding-top: 5.5rem;
     padding-bottom: 10px;
   }
   .text{
@@ -297,6 +323,9 @@ $navbg: $white;
 }
 .contentImg{
   position:relative;
+  @include breakpoint(small only){
+  padding-bottom:3rem;
+  }
   img{padding:0.5rem;
   }
 }
@@ -328,8 +357,10 @@ background-color: transparent;
     height: 100vh;
     z-index: 1000; }
 .unicornNameout{
+    opacity: 1;
+    @include breakpoint(medium){
     transition: opacity 0.8s ease-in-out;
-    opacity: 0;
+    opacity: 0;}
     }
 .language-active{ color: $black; font-weight: bold;}
 .menu-active{
@@ -371,4 +402,9 @@ position:absolute;
 top:0;
 width:100%;
 height: 400px;
+}
+.hidefull{
+  @include breakpoint(medium){
+  display:none;
+  }
 }

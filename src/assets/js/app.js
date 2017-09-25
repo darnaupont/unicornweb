@@ -19,10 +19,18 @@ $('.form-floating-label input, .form-floating-label textarea').blur(function(){
     $(this).parent().removeClass('has-value');
   }
 });
-
-$(document).on("scroll", function(){
-  if
-    ($(document).scrollTop() > 100){
+//
+// $(document).on("scroll", function(){
+//   if
+//     ($(document).scrollTop() > 100){
+//     $('.unicornName').addClass("unicornNameout");
+//   }
+//   else{
+//     $('.unicornName').removeClass("unicornNameout");
+//   }
+// });
+window.addEventListener('scroll', function(e){
+  if (window.scrollY > 10){
     $('.unicornName').addClass("unicornNameout");
   }
   else{
