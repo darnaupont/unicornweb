@@ -8,7 +8,7 @@ import Foundation from 'foundation-sites';
 // the line below
 //import './lib/foundation-explicit-pieces';
 
-
+Foundation.Interchange.SPECIAL_QUERIES['mediumretina'] = 'only screen and (min-width: 40em), (min-width: 40em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 40em) and (min--moz-device-pixel-ratio: 2), (min-width: 40em) and (-o-min-device-pixel-ratio: 2/1), (min-width: 40em) and (min-device-pixel-ratio: 2), (min-width: 40em) and (min-resolution: 192dpi), (min-width: 40em) and (min-resolution: 2dppx)';
 $(document).foundation();
 $('.form-floating-label input, .form-floating-label textarea').focusin(function(){
   $(this).parent().addClass('has-value');

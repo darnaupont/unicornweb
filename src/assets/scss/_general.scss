@@ -68,7 +68,7 @@ $navbg: rgba(254, 254, 254, 0.8);
       height: 1.4rem;
       @include breakpoint(small only){
       height: 14vw;
-      width: 14vw;
+      width: 12vw;
       max-height: 1.4rem;
       }
       @include breakpoint(medium){
@@ -99,7 +99,9 @@ $navbg: rgba(254, 254, 254, 0.8);
       padding-right:10px;
       display: inline-flex;
         a{float:right;
+          color: $medium-gray;
         padding: 18px 10px 0 0;
+        &:hover{color: $black;}
         }
       }
       @include breakpoint(medium){
@@ -108,6 +110,8 @@ $navbg: rgba(254, 254, 254, 0.8);
       a{
         padding: 0 22px;
         padding-bottom:15px;
+        color: $medium-gray;
+        &:hover{color: $black;}
         }
       }
     }
@@ -168,129 +172,6 @@ $navbg: rgba(254, 254, 254, 0.8);
 //   }
 
 
-#home{
-  // .content{
-  //   margin-top: 0px;
-  //   padding: 40px 40px 40px 70px;}
-  .content{
-    background: url('../img/desktop/info.jpg') no-repeat center center;
-    background-size: cover;
-  }
-  .text{
-  text-align: center;
-  @include breakpoint(medium){
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  }
-  @include breakpoint(small only){
-
-    padding:0.5rem 0;
-    margin-top:0;
-    margin-bottom:0;
-
-    }
-  }
-  .logohome{
-    margin-top:3rem;
-    width: 15vh;
-    height: 15vh;
-  }
-  h1{
-    padding: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    line-height: 1;
-    font-weight: 600;
-  small{
-
-    font-size: $h3-font-size;
-    @include breakpoint(medium){
-      font-size: $h1-font-size;
-    }
-    color: $black;
-    letter-spacing: 10px;
-    font-weight: 200;
-  }}
-  p{padding:0 3rem;}
-}
-
-#salon .content{
-    background: url('../img/desktop/salon.jpg') no-repeat center center;
-    background-size: cover;
-}
-#Dormitorio .content{
-  background: url('../img/desktop/dormitorio.jpg') no-repeat center center;
-  background-size: cover;
-}
-#salon, #Dormitorio{
-  // base per ensenyar
-@include breakpoint(small only){
-  .content{
-    min-height: 1rem;
-    height: auto;
-    margin-top: -30px;
-    padding-top: 5.5rem;
-    padding-bottom: 10px;
-  }
-  .text{
-    height: auto;
-    margin: 20px;
-
-  }
-}
-// fi de base
-  .text{
-  min-height: 1rem;
-      height: auto;
-  position:relative;
-  padding:1rem;
-  @include breakpoint(medium){
-  position:absolute;
-  bottom:15%;
-  right: 0;
-  left: 0;
-  padding:2rem;}
-  }
-  .logohome{
-    margin-top:3rem;
-    width: 130px;
-    height: 130px;
-  }
-  h1{
-    text-transform: uppercase;
-    font-weight: 500;
-  span{ font-size: $h1-font-size*0.8;
-    letter-spacing: 16px;
-    font-weight: 300;
-  }}
-  header{
-    width:100%;
-    h1{float:left}
-    a{float:right; margin-top:0.5rem;}
-    display:inline-block;
-  }
-}
-#contacto{
-
-  .content{
-  background: $medium-gray;
-  }
-  .text{
-    background: transparent;
-  }
-  header{
-    width:100%;
-    h1{float:left}
-    a{float:right;}
-    display:inline-block;
-  }
-  #formulario{
-    position:relative;
-    z-index: 10;
-    .right{float:right; margin-right: 0.5rem;}
-  }
-}
 .unicornhomb{
   margin: 2rem 0;
 }
@@ -362,7 +243,7 @@ background-color: transparent;
     transition: opacity 0.8s ease-in-out;
     opacity: 0;}
     }
-.language-active{ color: $black; font-weight: bold;}
+.language-active{ color: $black !important; font-weight: bold;}
 .menu-active{
     @include breakpoint(small only){
     border-bottom: 0.15rem solid $primary-color !important;
@@ -397,6 +278,143 @@ fill: $black !important;
 }
 
 
+#home{
+  // .content{
+  //   margin-top: 0px;
+  //   padding: 40px 40px 40px 70px;}
+  .content{
+    background: url('../img/mobile/info.jpg') no-repeat center center;
+    background-size: cover;
+    @include breakpoint(medium){
+      background: url('../img/desktop/info.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+  .text{
+  text-align: center;
+  @include breakpoint(medium){
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+  @include breakpoint(small only){
+
+    padding:0.5rem 0;
+    margin-top:0;
+    margin-bottom:0;
+
+    }
+  }
+  .logohome{
+    margin-top:3rem;
+    width: 15vh;
+    height: 15vh;
+  }
+  h1{
+    padding: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    line-height: 1;
+    font-weight: 600;
+  small{
+
+    font-size: $h3-font-size;
+    @include breakpoint(medium){
+      font-size: $h1-font-size;
+    }
+    color: $black;
+    letter-spacing: 10px;
+    font-weight: 200;
+  }}
+  p{padding:0 3rem;}
+}
+
+#salon .content{
+    background: url('../img/mobile/salon.jpg') no-repeat center center;
+    background-size: cover;
+    @include breakpoint(medium){
+      background: url('../img/desktop/dormitorio.jpg') no-repeat center center;
+      background-size: cover;
+    }
+}
+#Dormitorio .content{
+  background: url('../img/mobile/dormitorio.jpg') no-repeat center center;
+  background-size: cover;
+  @include breakpoint(medium){
+    background: url('../img/desktop/dormitorio.jpg') no-repeat center center;
+    background-size: cover;
+  }
+}
+#salon, #Dormitorio{
+  // base per ensenyar
+@include breakpoint(small only){
+  .content{
+    min-height: 1rem;
+    height: auto;
+    margin-top: -30px;
+    padding-top: 5.5rem;
+    padding-bottom: 10px;
+  }
+  .text{
+    height: auto;
+    margin: 20px;
+
+  }
+}
+// fi de base
+  .text{
+  min-height: 1rem;
+      height: auto;
+  position:relative;
+  padding:1rem;
+  @include breakpoint(medium){
+  position:absolute;
+  bottom:15%;
+  right: 0;
+  left: 0;
+  padding:2rem;}
+  }
+  .logohome{
+    margin-top:3rem;
+    width: 130px;
+    height: 130px;
+  }
+  h1{
+    text-transform: uppercase;
+    font-weight: 500;
+  span{ font-size: $h1-font-size*0.8;
+    letter-spacing: 16px;
+    font-weight: 300;
+  }}
+  header{
+    width:100%;
+    h1{float:left}
+    a{float:right; margin-top:0.5rem;}
+    display:inline-block;
+  }
+}
+#contacto{
+.unicornbutton{
+  padding-top:1rem;
+  }
+  .content{
+  background: $light-gray;
+  }
+  .text{
+    background: transparent;
+  }
+  header{
+    width:100%;
+    h1{float:left}
+    a{float:right;}
+    display:inline-block;
+  }
+  #formulario{
+    position:relative;
+    z-index: 10;
+    .right{float:right; margin-right: 0.5rem;}
+  }
+}
 #map{
 position:absolute;
 top:0;
@@ -407,4 +425,9 @@ height: 400px;
   @include breakpoint(medium){
   display:none;
   }
+}
+.mapsmall{
+  padding-top:2rem;
+  background-color: $white;
+  img{max-width: 100vw; width: 100vw; padding: 2rem 0;}
 }
