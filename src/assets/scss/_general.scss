@@ -17,6 +17,7 @@ $navbg: rgba(254, 254, 254, 0.8);
     padding:0;
     display:inline-block;
     @include breakpoint(medium){
+    ul {width: 4.3rem;}
     display:inline;
     width:auto;}
   }
